@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IP Media Sochi — redesign
 
-## Getting Started
+Многостраничный сайт интернет-провайдера **IP Media Sochi**, построенный на **Next.js 16 + React 19 + TypeScript + Tailwind CSS 4**. UI/UX заимствует современные паттерны `msk.dom.ru`, но полностью использует оригинальные услуги и данные IP Media с фирменной оранжево-графитовой палитрой, извлечённой из официального логотипа.
 
-First, run the development server:
+## Стек
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router, SSG, Turbopack)
+- **React 19** + **TypeScript 5**
+- **Tailwind CSS 4** (CSS-first, `@theme` в `globals.css`)
+- **Framer Motion** — анимации и переходы
+- **lucide-react** — иконки
+- **react-hook-form + zod** — валидация форм
+- **next/font** — Inter + Manrope (latin + cyrillic)
+
+## Структура
+
+```
+app/
+  layout.tsx               # root + шрифты + metadata + ToastProvider
+  page.tsx                 # главная: 11 секций
+  globals.css              # Tailwind 4 @theme + брендовые токены
+  tarify/page.tsx          # каталог тарифов (квартира/дом/бизнес)
+  uslugi/
+    internet, iptv, telefoniya,
+    co-location, videonablyudenie,
+    kompyuternaya-pomoshch
+  zastroyshchikam, o-kompanii, kontakty, oplata
+  sitemap.ts, robots.ts, not-found.tsx
+
+components/
+  layout/   TopBar · Header · Footer · MobileDrawer · StickyMobileCta
+  home/     Hero · AddressChecker · ServiceTiles · WhyUs
+            TariffsSection · TariffConstructor
+            AdditionalServices · SpeedtestBanner · HowToConnect · Faq · ContactCta
+  tariffs/  TariffCard · TariffsCatalog
+  services/ ServicePage (универсальный шаблон)
+  forms/    CallbackForm
+  ui/       Button · Card · Badge · Container · SectionHeading · Toast
+
+lib/
+  data/    tariffs · services · service-details · faq · company
+  utils/   cn · format
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Брендовая палитра (извлечена из `public/images/logo.png`)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Цвет | Hex | Применение |
+| ---- | --- | ---------- |
+| `brand-500` | `#F18323` | Основной оранжевый — CTA, ссылки, иконки |
+| `brand-600` | `#E95A29` | Hover, активные состояния |
+| `brand-700` | `#E3372D` | Бейджи «Хит», градиент finish |
+| `ink-800`   | `#353639` | Графит из букв логотипа — заголовки |
+| `ink-900`   | `#1E1E1E` | Максимальный контраст, тёмные секции |
+| `ink-400`   | `#A8A09F` | Серебристый блик — placeholder |
+| `surface-50`/`surface-100` | `#FBFBFC`/`#F5F5F6` | Фоны секций |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Фирменный градиент: `linear-gradient(135deg, #F18323 → #E95A29 → #E3372D)`.
 
-## Learn More
+## Запуск
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # продакшн-сборка (все страницы SSG)
+npm run start    # запуск продакшн-сервера
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Что уже готово
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Главная (11 секций): hero-слайдер, проверка адреса, плитки услуг, тарифы с табами, **конструктор тарифа** с живой ценой, «почему мы», доп. услуги, speedtest, таймлайн подключения, FAQ, CTA-форма
+- Страница **/tarify** — полный каталог с табами (квартира/дом/бизнес) и сортировкой по цене/скорости
+- 6 страниц услуг по единому шаблону с привязанными тарифами
+- Страницы «Застройщикам», «О компании», «Контакты» (с Я.Картой), «Оплата»
+- Мобильный drawer, sticky CTA, фиксированный header
+- Формы на `react-hook-form + zod` с тостами
+- SEO: per-page metadata, OG, sitemap.xml, robots.txt
 
-## Deploy on Vercel
+## Что добавить при интеграции
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Бэкенд для форм (Telegram-бот / SMTP / CRM) — текущая реализация показывает тост, не отправляя запрос
+- Реальная проверка адресов против базы зоны покрытия
+- Структурированные данные `LocalBusiness` + `Service` (JSON-LD) — скелет лежит в `metadata`
+- Интеграция с lk.sochi-net.ru и платёжной системой Payler
