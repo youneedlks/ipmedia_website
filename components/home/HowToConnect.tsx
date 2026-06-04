@@ -42,7 +42,7 @@ export function HowToConnect() {
 
           {steps.map((s, i) => (
             <div key={s.title} className="relative text-center">
-              <div className="relative mx-auto h-20 w-20 rounded-full brand-gradient flex items-center justify-center text-white shadow-[0_15px_40px_-15px_rgba(227,55,45,0.6)]">
+              <div className="relative mx-auto h-20 w-20 rounded-full brand-gradient flex items-center justify-center text-white shadow-[0_15px_40px_-15px_rgba(7,85,215,0.6)]">
                 <s.icon className="h-9 w-9" />
                 <span className="absolute -top-2 -right-2 h-8 w-8 rounded-full bg-white text-brand-600 border-2 border-brand-500 flex items-center justify-center text-sm font-extrabold">
                   {i + 1}

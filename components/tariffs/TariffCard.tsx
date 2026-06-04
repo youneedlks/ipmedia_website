@@ -19,7 +19,7 @@ export function TariffCard({
       className={cn(
         "relative flex flex-col rounded-[var(--radius-card)] bg-white border transition-all duration-300",
         t.highlight
-          ? "border-transparent shadow-[0_20px_50px_-20px_rgba(241,131,35,0.35)] ring-2 ring-brand-500"
+          ? "border-transparent shadow-[0_20px_50px_-20px_rgba(7,85,215,0.35)] ring-2 ring-brand-500"
           : "border-ink-100 hover:border-brand-300 hover:shadow-[var(--shadow-card-hover)]",
       )}
     >

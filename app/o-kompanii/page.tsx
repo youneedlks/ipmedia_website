@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Calendar,
-  Users,
   Building2,
   ShieldCheck,
   Award,
@@ -44,15 +43,14 @@ const milestones = [
   {
     year: `${new Date().getFullYear()}`,
     title: "Сегодня",
-    text: "Десятки новостроек Сочи подключены на этапе сдачи, собственный дата-центр, поддержка 24/7",
+    text: "Десятки новостроек Сочи подключены на этапе сдачи, собственный дата-центр, развитая сеть в городе",
   },
 ];
 
 const facts = [
   { icon: Calendar, value: `${new Date().getFullYear() - company.since}+`, label: "лет на рынке" },
-  { icon: Users, value: "50k+", label: "абонентов в Сочи" },
   { icon: Building2, value: "FTTB", label: "оптика до дома" },
-  { icon: ShieldCheck, value: "24/7", label: "мониторинг сети" },
+  { icon: ShieldCheck, value: "SLA", label: "гарантия для бизнеса" },
   { icon: Award, value: "Лицензия", label: "на все услуги" },
   { icon: Trophy, value: "«Безопасный Сочи»", label: "партнёр" },
 ];

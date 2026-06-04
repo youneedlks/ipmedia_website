@@ -65,8 +65,8 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         icon: Clock,
-        title: "Поддержка 24/7",
-        text: "Техподдержка круглосуточно — по телефону и WhatsApp",
+        title: "Поддержка и сервис",
+        text: "Поможем с настройкой — по телефону и в мессенджере MAX",
       },
     ],
     features: [
@@ -244,7 +244,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         title: "Удалённое управление",
-        text: "IPMI, KVM-over-IP и консольный доступ к вашему серверу 24/7",
+        text: "IPMI, KVM-over-IP и консольный доступ к вашему серверу в любое время",
       },
       {
         title: "Подходит малому бизнесу",

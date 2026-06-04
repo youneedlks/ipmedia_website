@@ -13,7 +13,7 @@ export function SpeedtestBanner() {
 
           <div className="relative grid gap-6 md:grid-cols-[1fr_auto] items-center">
             <div className="flex items-start gap-5">
-              <span className="hidden sm:flex h-16 w-16 items-center justify-center rounded-2xl brand-gradient text-white shadow-[0_12px_28px_-10px_rgba(227,55,45,0.5)] shrink-0">
+              <span className="hidden sm:flex h-16 w-16 items-center justify-center rounded-2xl brand-gradient text-white shadow-[0_12px_28px_-10px_rgba(7,85,215,0.5)] shrink-0">
                 <Gauge className="h-8 w-8" />
               </span>
               <div>

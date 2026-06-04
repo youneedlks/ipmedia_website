@@ -56,7 +56,7 @@ export function CallbackForm({
   const inputBase = cn(
     "h-12 w-full pl-11 pr-4 rounded-full text-[15px] outline-none transition-all",
     isDark
-      ? "bg-white/[0.14] border border-white/25 text-white placeholder:text-white/70 hover:bg-white/[0.18] focus:bg-white/20 focus:border-brand-400 focus:shadow-[0_0_0_4px_rgba(241,131,35,0.2)]"
+      ? "bg-white/[0.14] border border-white/25 text-white placeholder:text-white/70 hover:bg-white/[0.18] focus:bg-white/20 focus:border-brand-400 focus:shadow-[0_0_0_4px_rgba(7,85,215,0.2)]"
       : "bg-ink-50 border border-ink-100 text-ink-900 placeholder:text-ink-400 focus:bg-white focus:border-brand-500 focus:shadow-[var(--shadow-glow)]",
   );
   const iconClass = cn(

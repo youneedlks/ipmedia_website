@@ -19,13 +19,13 @@ export function TopBar() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
+            href={company.max.url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-ink-200 hover:text-brand-500 transition-colors"
           >
             <MessageCircle className="h-3.5 w-3.5" />
-            WhatsApp
+            {company.max.label}
           </a>
           <a
             href={company.payUrl}

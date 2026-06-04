@@ -1,34 +1,34 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   IP Media Sochi — Design Tokens
-   Все цвета извлечены из официального логотипа (см. /public/images/logo.png)
+   IP Media Sochi — Design Tokens (ребрендинг 2026)
+   Фирменный синий #0755D7 (основной) + тёмно-синий #00145F (доп.)
    ========================================================================== */
 
 @theme {
-  /* Brand Orange — из оранжевого глобуса и плашки "СОЧИ" логотипа */
-  --color-brand-50: #fff5ec;
-  --color-brand-100: #ffe6d2;
-  --color-brand-200: #fbcfa8;
-  --color-brand-300: #f5cdab;
-  --color-brand-400: #f8a767;
-  --color-brand-500: #f18323; /* основной */
-  --color-brand-600: #e95a29; /* hover */
-  --color-brand-700: #e3372d; /* CTA-акцент */
-  --color-brand-800: #b4231b;
-  --color-brand-900: #7e1712;
+  /* Brand Blue — технологичный синий из нового логотипа */
+  --color-brand-50: #eaf1fe;
+  --color-brand-100: #d3e2fd;
+  --color-brand-200: #aecbfb;
+  --color-brand-300: #7eaaf8;
+  --color-brand-400: #4480f2;
+  --color-brand-500: #0755d7; /* основной фирменный */
+  --color-brand-600: #0646b3; /* hover */
+  --color-brand-700: #06388f; /* active / CTA-акцент */
+  --color-brand-800: #042a6b;
+  --color-brand-900: #00145f; /* глубокий тёмно-синий */
 
-  /* Ink — графит из букв IPMedia в логотипе */
-  --color-ink-50: #f5f5f6;
-  --color-ink-100: #eaeaeb;
-  --color-ink-200: #d5d5d6;
-  --color-ink-300: #b8b8ba;
-  --color-ink-400: #a8a09f; /* серебристый блик */
-  --color-ink-500: #77777a;
-  --color-ink-600: #5a595a;
-  --color-ink-700: #454547;
-  --color-ink-800: #353639; /* основной графит логотипа */
-  --color-ink-900: #1e1e1e;
+  /* Ink — нейтральный графит для текста */
+  --color-ink-50: #f4f6f9;
+  --color-ink-100: #e8ebf1;
+  --color-ink-200: #d2d8e3;
+  --color-ink-300: #b3bccb;
+  --color-ink-400: #8b95a7;
+  --color-ink-500: #6b7486;
+  --color-ink-600: #4c5468;
+  --color-ink-700: #353c4d;
+  --color-ink-800: #1f2535; /* тёмный графит с синим подтоном */
+  --color-ink-900: #0e1320;
 
   /* Surfaces */
   --color-surface-0: #ffffff;
@@ -45,9 +45,9 @@
   --radius-pill: 999px;
 
   /* Shadows */
-  --shadow-card: 0 4px 24px -8px rgba(53, 54, 57, 0.12), 0 2px 6px -2px rgba(53, 54, 57, 0.06);
-  --shadow-card-hover: 0 12px 32px -10px rgba(241, 131, 35, 0.25), 0 4px 10px -3px rgba(53, 54, 57, 0.1);
-  --shadow-glow: 0 0 0 6px rgba(241, 131, 35, 0.18);
+  --shadow-card: 0 4px 24px -8px rgba(14, 19, 32, 0.12), 0 2px 6px -2px rgba(14, 19, 32, 0.06);
+  --shadow-card-hover: 0 12px 32px -10px rgba(7, 85, 215, 0.28), 0 4px 10px -3px rgba(14, 19, 32, 0.1);
+  --shadow-glow: 0 0 0 6px rgba(7, 85, 215, 0.18);
 
   /* Motion */
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
@@ -92,15 +92,15 @@
    ========================================================================== */
 
 @utility brand-gradient {
-  background-image: linear-gradient(135deg, #f18323 0%, #e95a29 55%, #e3372d 100%);
+  background-image: linear-gradient(135deg, #0755d7 0%, #0a3da0 55%, #00145f 100%);
 }
 
 @utility brand-gradient-soft {
-  background-image: linear-gradient(135deg, #fff5ec 0%, #fbcfa8 100%);
+  background-image: linear-gradient(135deg, #eaf1fe 0%, #c7dbfb 100%);
 }
 
 @utility brand-text-gradient {
-  background-image: linear-gradient(135deg, #f18323 0%, #e3372d 100%);
+  background-image: linear-gradient(135deg, #0755d7 0%, #00145f 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

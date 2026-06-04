@@ -14,11 +14,9 @@ import {
   ChevronLeft,
   ChevronRight,
   Gauge,
-  Clock,
   Gift,
   Signal,
   ShieldCheck,
-  Users,
   Radio,
   Sparkles,
 } from "lucide-react";
@@ -46,7 +44,7 @@ const slides: Slide[] = [
       <>
         Интернет <span className="brand-text-gradient">от 290 ₽</span>
         <br />
-        с поддержкой 24/7
+        и надёжная поддержка
       </>
     ),
     description:
@@ -59,7 +57,7 @@ const slides: Slide[] = [
     },
     stats: [
       { value: "100", label: "Мбит/с", icon: Gauge },
-      { value: "24/7", label: "Поддержка", icon: Clock },
+      { value: "FTTB", label: "Оптика", icon: Signal },
       { value: "0 ₽", label: "Подключение", icon: Gift },
     ],
     highlight: {
@@ -119,7 +117,7 @@ const slides: Slide[] = [
     stats: [
       { value: "FTTB", label: "Оптика", icon: Signal },
       { value: "SLA", label: "Гарантия", icon: ShieldCheck },
-      { value: "24/7", label: "Мониторинг", icon: Users },
+      { value: "DC", label: "Дата-центр", icon: Building2 },
     ],
     highlight: {
       icon: Building2,
@@ -243,7 +241,7 @@ export function Hero() {
                 exit="exit"
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="inline-flex items-center gap-2 h-8 px-3.5 rounded-full bg-white border border-brand-200 text-[11px] font-bold tracking-wider uppercase text-brand-700 shadow-[0_4px_14px_-6px_rgba(241,131,35,0.35)]">
+                <span className="inline-flex items-center gap-2 h-8 px-3.5 rounded-full bg-white border border-brand-200 text-[11px] font-bold tracking-wider uppercase text-brand-700 shadow-[0_4px_14px_-6px_rgba(7,85,215,0.35)]">
                   {slide.badge.icon}
                   {slide.badge.text}
                 </span>
@@ -352,7 +350,7 @@ export function Hero() {
                           Ключевые цифры
                         </div>
                       </div>
-                      <span className="flex h-10 w-10 items-center justify-center rounded-xl brand-gradient text-white shadow-[0_10px_22px_-8px_rgba(227,55,45,0.55)]">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-xl brand-gradient text-white shadow-[0_10px_22px_-8px_rgba(7,85,215,0.55)]">
                         {slide.badge.icon}
                       </span>
                     </div>
@@ -374,7 +372,7 @@ export function Hero() {
                       ))}
                     </div>
 
-                    <div className="mt-5 p-4 rounded-2xl brand-gradient text-white flex items-center gap-3 shadow-[0_12px_30px_-12px_rgba(227,55,45,0.5)]">
+                    <div className="mt-5 p-4 rounded-2xl brand-gradient text-white flex items-center gap-3 shadow-[0_12px_30px_-12px_rgba(7,85,215,0.5)]">
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm">
                         <slide.highlight.icon className="h-5 w-5" />
                       </span>
@@ -416,7 +414,7 @@ function SliderArrow({
     <button
       onClick={onClick}
       aria-label={direction === "prev" ? "Предыдущий слайд" : "Следующий слайд"}
-      className="h-11 w-11 inline-flex items-center justify-center rounded-full bg-white border border-ink-200 text-ink-700 hover:border-brand-500 hover:text-brand-600 hover:shadow-[0_8px_20px_-8px_rgba(241,131,35,0.35)] transition-all active:scale-95"
+      className="h-11 w-11 inline-flex items-center justify-center rounded-full bg-white border border-ink-200 text-ink-700 hover:border-brand-500 hover:text-brand-600 hover:shadow-[0_8px_20px_-8px_rgba(7,85,215,0.35)] transition-all active:scale-95"
     >
       <Icon className="h-4.5 w-4.5" />
     </button>

@@ -10,7 +10,7 @@ import { telHref } from "@/lib/utils/format";
 export const metadata: Metadata = {
   title: "Контакты IP Media Sochi",
   description:
-    "Контакты IP Media Sochi: адрес офиса в Сочи, телефоны отдела подключений и техподдержки, email, WhatsApp, режим работы.",
+    "Контакты IP Media Sochi: адрес офиса в Сочи, телефон отдела подключений, email, мессенджер MAX, режим работы.",
 };
 
 const contacts = [
@@ -23,10 +23,10 @@ const contacts = [
   },
   {
     icon: MessageCircle,
-    label: "Техподдержка 24/7",
-    value: company.phones.support,
-    href: `https://wa.me/${company.whatsapp.replace(/\D/g, "")}`,
-    desc: "WhatsApp и телефон круглосуточно",
+    label: "Поддержка",
+    value: `Написать в ${company.max.label}`,
+    href: company.max.url,
+    desc: "Мессенджер MAX — поможем с настройкой",
   },
   {
     icon: Mail,
@@ -52,7 +52,7 @@ export default function Page() {
             <span className="brand-text-gradient">IP Media Sochi</span>
           </>
         }
-        description="Мы на связи 24/7 — по телефону, WhatsApp и email. Также вы можете заглянуть в офис на ул. Туапсинская."
+        description="Свяжитесь с нами по телефону, в мессенджере MAX или по email. Также вы можете заглянуть в офис на ул. Туапсинская."
       />
 
       <section className="py-16 md:py-20">
@@ -108,8 +108,6 @@ export default function Page() {
                     </div>
                     <div className="text-sm text-ink-600">
                       {company.hours.office}
-                      <br />
-                      {company.hours.support}
                     </div>
                   </div>
                 </div>

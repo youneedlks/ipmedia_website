@@ -29,7 +29,7 @@ export function ServiceTiles() {
               <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-brand-50 -translate-y-10 translate-x-10 group-hover:scale-[1.5] transition-transform duration-500" />
 
               <div className="relative">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl brand-gradient text-white shadow-[0_10px_24px_-10px_rgba(227,55,45,0.5)]">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl brand-gradient text-white shadow-[0_10px_24px_-10px_rgba(7,85,215,0.5)]">
                   <s.icon className="h-7 w-7" />
                 </span>
                 <h3 className="mt-5 text-xl font-bold text-ink-900">

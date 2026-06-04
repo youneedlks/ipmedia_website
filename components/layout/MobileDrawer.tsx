@@ -123,13 +123,13 @@ export function MobileDrawer({
               </a>
               <div className="grid grid-cols-3 gap-2 text-[12px] font-semibold text-ink-700">
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
+                  href={company.max.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-1 p-3 rounded-xl bg-ink-50 hover:bg-brand-50"
                 >
                   <MessageCircle className="h-5 w-5 text-brand-500" />
-                  WhatsApp
+                  {company.max.label}
                 </a>
                 <a
                   href={company.accountUrl}

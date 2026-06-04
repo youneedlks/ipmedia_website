@@ -8,7 +8,7 @@ export function ContactCta() {
   return (
     <section className="py-16 md:py-24">
       <Container>
-        <div className="relative overflow-hidden rounded-[2rem] brand-gradient text-white shadow-[0_30px_80px_-30px_rgba(227,55,45,0.45)]">
+        <div className="relative overflow-hidden rounded-[2rem] brand-gradient text-white shadow-[0_30px_80px_-30px_rgba(7,85,215,0.45)]">
           {/* Decorative layer — subtle white glow + dot pattern, без оранжевых блюров */}
           <div className="absolute -top-40 -right-20 h-[520px] w-[520px] rounded-full bg-white/15 blur-[140px] pointer-events-none" />
           <div className="absolute -bottom-20 -left-32 h-[420px] w-[420px] rounded-full bg-white/10 blur-[140px] pointer-events-none" />
@@ -30,7 +30,7 @@ export function ContactCta() {
               <h2 className="mt-5 text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-[1.05] tracking-tight text-white">
                 Свяжитесь с нами —
                 <br />
-                мы на связи <span className="whitespace-nowrap">24/7</span>
+                поможем с подключением
               </h2>
               <p className="mt-4 text-[15px] md:text-base text-white/90 max-w-lg leading-relaxed">
                 Оставьте заявку, и менеджер свяжется в течение 15 минут, чтобы
@@ -56,7 +56,7 @@ export function ContactCta() {
                   <ArrowUpRight className="h-4 w-4 text-white/60 group-hover:text-white transition-colors" />
                 </a>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
+                  href={company.max.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 p-3.5 rounded-2xl bg-white/12 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 transition-colors"
@@ -66,10 +66,10 @@ export function ContactCta() {
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="text-[10px] font-bold tracking-[0.18em] uppercase text-white/80">
-                      WhatsApp · техподдержка
+                      {company.max.label} · поддержка
                     </div>
-                    <div className="text-lg font-extrabold tabular-nums leading-tight">
-                      {company.whatsapp}
+                    <div className="text-lg font-extrabold leading-tight">
+                      Написать в {company.max.label}
                     </div>
                   </div>
                   <ArrowUpRight className="h-4 w-4 text-white/60 group-hover:text-white transition-colors" />
@@ -78,7 +78,7 @@ export function ContactCta() {
             </div>
 
             <div className="relative bg-white rounded-[1.75rem] p-6 md:p-7 lg:p-8 text-ink-900 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.35)]">
-              <div className="absolute -top-3 left-7 inline-flex items-center gap-1.5 h-6 px-2.5 rounded-full brand-gradient text-white text-[10px] font-bold tracking-[0.18em] uppercase shadow-[0_6px_16px_-4px_rgba(227,55,45,0.55)]">
+              <div className="absolute -top-3 left-7 inline-flex items-center gap-1.5 h-6 px-2.5 rounded-full brand-gradient text-white text-[10px] font-bold tracking-[0.18em] uppercase shadow-[0_6px_16px_-4px_rgba(7,85,215,0.55)]">
                 <Sparkles className="h-3 w-3" />
                 15 минут
               </div>

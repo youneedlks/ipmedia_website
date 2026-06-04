@@ -43,13 +43,13 @@ export function Footer() {
                 <span className="font-semibold">{company.phones.sales}</span>
               </a>
               <a
-                href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
+                href={company.max.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-brand-500 transition-colors"
               >
                 <MessageCircle className="h-4 w-4 text-brand-500" />
-                {company.whatsapp} · WhatsApp
+                Поддержка в {company.max.label}
               </a>
               <a
                 href={`mailto:${company.email}`}
@@ -64,11 +64,7 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-2.5">
                 <Clock className="h-4 w-4 text-brand-500 mt-0.5 shrink-0" />
-                <span>
-                  {company.hours.office}
-                  <br />
-                  {company.hours.support}
-                </span>
+                <span>{company.hours.office}</span>
               </div>
             </div>
           </div>
@@ -129,7 +125,7 @@ export function Footer() {
             </p>
             <Link
               href="/tarify"
-              className="brand-gradient inline-flex items-center justify-center h-11 px-5 rounded-full text-white text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(227,55,45,0.55)] hover:opacity-95 transition"
+              className="brand-gradient inline-flex items-center justify-center h-11 px-5 rounded-full text-white text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(7,85,215,0.55)] hover:opacity-95 transition"
             >
               Подобрать тариф
             </Link>

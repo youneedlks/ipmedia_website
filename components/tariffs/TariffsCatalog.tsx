@@ -55,7 +55,7 @@ export function TariffsCatalog() {
               className={cn(
                 "inline-flex items-center gap-2 h-12 px-5 rounded-full text-sm font-semibold transition-all",
                 active
-                  ? "brand-gradient text-white shadow-[0_10px_30px_-10px_rgba(227,55,45,0.5)]"
+                  ? "brand-gradient text-white shadow-[0_10px_30px_-10px_rgba(7,85,215,0.5)]"
                   : "bg-white text-ink-700 border border-ink-100 hover:border-brand-300 hover:text-brand-600",
               )}
             >

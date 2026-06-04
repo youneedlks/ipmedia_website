@@ -54,7 +54,7 @@ export function TariffConstructor() {
           {/* Left panel */}
           <div className="rounded-[2rem] bg-white border border-ink-100 shadow-[0_20px_50px_-25px_rgba(53,54,57,0.12)] p-6 md:p-8">
             <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl brand-gradient text-white shadow-[0_10px_22px_-8px_rgba(227,55,45,0.5)]">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl brand-gradient text-white shadow-[0_10px_22px_-8px_rgba(7,85,215,0.5)]">
                 <Wifi className="h-5 w-5" />
               </span>
               <div>
@@ -98,7 +98,7 @@ export function TariffConstructor() {
                   [&::-webkit-slider-thumb]:bg-white
                   [&::-webkit-slider-thumb]:border-[3px]
                   [&::-webkit-slider-thumb]:border-brand-500
-                  [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(241,131,35,0.15)]
+                  [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(7,85,215,0.15)]
                   [&::-webkit-slider-thumb]:transition-transform
                   [&::-webkit-slider-thumb]:hover:scale-110
                   [&::-moz-range-thumb]:w-5
@@ -108,7 +108,7 @@ export function TariffConstructor() {
                   [&::-moz-range-thumb]:border-[3px]
                   [&::-moz-range-thumb]:border-brand-500"
                 style={{
-                  background: `linear-gradient(to right, #F18323 0%, #E95A29 ${
+                  background: `linear-gradient(to right, #0755D7 0%, #00145F ${
                     (stepIdx / (speedSteps.length - 1)) * 100
                   }%, var(--color-ink-100) ${
                     (stepIdx / (speedSteps.length - 1)) * 100
@@ -155,7 +155,7 @@ export function TariffConstructor() {
           </div>
 
           {/* Right summary */}
-          <div className="relative rounded-[2rem] p-[1.5px] brand-gradient shadow-[0_25px_60px_-20px_rgba(227,55,45,0.3)]">
+          <div className="relative rounded-[2rem] p-[1.5px] brand-gradient shadow-[0_25px_60px_-20px_rgba(7,85,215,0.3)]">
             <div className="bg-white rounded-[1.92rem] p-7 h-full flex flex-col">
               <div className="flex items-center justify-between">
                 <div className="text-[11px] font-bold tracking-[0.22em] uppercase text-ink-500">
@@ -216,7 +216,7 @@ export function TariffConstructor() {
               <div className="mt-5 space-y-2 text-[13px] text-ink-700">
                 {[
                   "Бесплатное подключение в зоне сети",
-                  "Поддержка 24/7, без скрытых платежей",
+                  "Техподдержка без скрытых платежей",
                 ].map((f) => (
                   <div key={f} className="flex items-start gap-2">
                     <Check className="h-4 w-4 text-brand-500 mt-0.5 shrink-0" />
@@ -265,7 +265,7 @@ function ToggleCard({
       className={cn(
         "group text-left p-4 rounded-2xl border transition-all",
         active
-          ? "bg-brand-50 border-brand-300 shadow-[0_10px_24px_-12px_rgba(241,131,35,0.3)]"
+          ? "bg-brand-50 border-brand-300 shadow-[0_10px_24px_-12px_rgba(7,85,215,0.3)]"
           : "bg-white border-ink-100 hover:border-brand-200",
       )}
     >

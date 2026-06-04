@@ -43,7 +43,7 @@ const offerings = [
   {
     icon: Users,
     title: "Работа с УК",
-    text: "Оперативная поддержка и взаимодействие с управляющей компанией в режиме 24/7",
+    text: "Оперативная поддержка и взаимодействие с управляющей компанией",
   },
   {
     icon: Handshake,
@@ -117,7 +117,7 @@ export default function Page() {
                 {[
                   "Проектные решения с учётом требований МЧС и СНиП",
                   "Соблюдение сроков и готовность к сдаче объекта в эксплуатацию",
-                  "Собственная аварийная и плановая служба 24/7",
+                  "Собственная аварийная и плановая служба",
                   "Единый оператор всей слаботочки на объекте",
                   "Опыт работы с ЖК и БЦ в Сочи, Адлере, Лазаревском",
                 ].map((p) => (
@@ -128,7 +128,7 @@ export default function Page() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-[2rem] brand-gradient p-1 shadow-[0_30px_60px_-20px_rgba(227,55,45,0.35)]">
+            <div className="rounded-[2rem] brand-gradient p-1 shadow-[0_30px_60px_-20px_rgba(7,85,215,0.35)]">
               <div className="bg-white rounded-[1.85rem] p-8">
                 <div className="text-xs font-semibold tracking-wider uppercase text-ink-500">
                   Итого для застройщика
@@ -137,7 +137,7 @@ export default function Page() {
                   {[
                     ["15+", "лет опыта в Сочи"],
                     ["100%", "покрытие FTTB-оптикой"],
-                    ["24/7", "аварийная служба"],
+                    ["DC", "собственный дата-центр"],
                     ["SLA", "по договору"],
                   ].map(([v, l]) => (
                     <div

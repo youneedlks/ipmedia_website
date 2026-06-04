@@ -22,7 +22,7 @@ export function Faq() {
               <span className="brand-text-gradient">вопросы</span>
             </>
           }
-          description="Не нашли ответ? Позвоните нам или напишите в WhatsApp — мы на связи 24/7"
+          description="Не нашли ответ? Позвоните нам или напишите в мессенджер MAX — поможем."
           align="center"
           className="mx-auto"
         />
